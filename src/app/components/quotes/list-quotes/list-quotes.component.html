@@ -1,0 +1,17 @@
+<section class="container">
+  <header class="header d-flex">
+    <h2 class="ff-inter">My Board</h2>
+    <button routerLink="/createQuote" class="botao">Add Quote</button>
+  </header>
+  <div class="mural" *ngIf="quoteList.length > 0, else semPensamentos">
+    <div *ngFor="let quote of quoteList">
+      <app-quote [quote]="quote"></app-quote>
+    </div>
+  </div>
+</section>
+<ng-template #semPensamentos>
+  <div class="ff-inter sem-pensamento">
+    <p>There is no quote.</p>
+  </div>
+</ng-template>
+
