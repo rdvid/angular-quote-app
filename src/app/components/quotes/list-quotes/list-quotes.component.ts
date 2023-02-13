@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Quote } from '../quote/quote';
 
 @Component({
   selector: 'app-list-quotes',
@@ -6,24 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list-quotes.component.css'],
 })
 export class ListQuotesComponent implements OnInit {
-  quoteList = [
-    {
-      conteudo: 'I love Angular',
-      autoria: 'Rafael D',
-      modelo: 'modelo3',
-    },
-    {
-      conteudo: 'I love Angular',
-      autoria: 'Rafael D',
-      modelo: 'modelo3',
-    },
-    {
-      conteudo:
-        'Contrary to popular belief, Lorem Ipsum is not simpasdsadsadsadsadsadsadsdsassasadsadsaaaaaaaaaaaaaaaaaaaaaaaaaasdContrary to popular belief, Lorem Ipsum is not simpasdsadsadsadsadsadsadsdsassasadsadsaaaaaaaaaaaaaaaaaaaaaaaaaasdContrary to popular belief, Lorem Ipsum is not simpasdsadsadsadsadsadsadsdsassasadsadsaaaaaaaaaaaaaaaaaaaaaaaaaasd',
-      autoria: 'David',
-      modelo: 'modelo3',
-    },
-  ];
+  quoteList: Quote[] = [];
 
   constructor() {}
 

@@ -1,0 +1,22 @@
+{
+  "quotes": [
+    {
+      "id": 1,
+      "conteudo": "good to see you",
+      "autoria": "dev",
+      "modelo": "modelo1"
+    },
+    {
+      "id": 2,
+      "conteudo": "bad to see you",
+      "autoria": "ved",
+      "modelo": "modelo2"
+    },
+    {
+      "id": 3,
+      "conteudo": "angular > react",
+      "autoria": "me",
+      "modelo": "modelo3"
+    }
+  ]
+}
