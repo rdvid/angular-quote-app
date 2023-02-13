@@ -1,3 +1,4 @@
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -9,6 +10,8 @@ import { CreateQuotesComponent } from './components/quotes/create-quotes/create-
 import { FormsModule } from '@angular/forms';
 import { ListQuotesComponent } from './components/quotes/list-quotes/list-quotes.component';
 import { QuoteComponent } from './components/quotes/quote/quote.component';
+import { DeleteQuoteComponent } from './components/quotes/delete-quote/delete-quote.component';
+import { EditQuoteComponent } from './components/quotes/edit-quote/edit-quote.component';
 
 @NgModule({
   declarations: [
@@ -19,8 +22,10 @@ import { QuoteComponent } from './components/quotes/quote/quote.component';
     CreateQuotesComponent,
     ListQuotesComponent,
     QuoteComponent,
+    DeleteQuoteComponent,
+    EditQuoteComponent,
   ],
-  imports: [BrowserModule, FormsModule, AppRoutingModule],
+  imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })

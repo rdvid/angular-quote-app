@@ -3,10 +3,10 @@
   <p class="conteudo">{{quote.conteudo}}</p>
   <p class="autoria"><b>{{quote.autoria}}</b></p>
   <div class="acoes">
-    <button class="botao-editar">
+    <button class="botao-editar" routerLink="/quote/editQuote/{{quote.id}}">
       <img src="assets/imagens/icone-editar.png" alt="Icone de Editar">
     </button>
-    <button class="botao-excluir">
+    <button class="botao-excluir" routerLink="/quote/deleteQuote/{{quote.id}}">
       <img src="assets/imagens/icone-excluir.png" alt="Icone de Excluir">
     </button>
   </div>

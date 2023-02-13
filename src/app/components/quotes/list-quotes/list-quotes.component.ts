@@ -1,3 +1,4 @@
+import { QuoteService } from './../quote.service';
 import { Component, OnInit } from '@angular/core';
 import { Quote } from '../quote/quote';
 
@@ -9,7 +10,11 @@ import { Quote } from '../quote/quote';
 export class ListQuotesComponent implements OnInit {
   quoteList: Quote[] = [];
 
-  constructor() {}
+  constructor(private service: QuoteService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.service.listar().subscribe((quoteList) => {
+      this.quoteList = quoteList;
+    });
+  }
 }

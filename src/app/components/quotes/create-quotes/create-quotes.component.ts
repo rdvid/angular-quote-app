@@ -1,4 +1,7 @@
+import { Quote } from './../quote/quote';
+import { QuoteService } from './../quote.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-quotes',
@@ -6,22 +9,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./create-quotes.component.css'],
 })
 export class CreateQuotesComponent implements OnInit {
-  pensamento = {
-    id: '1',
-    conteudo: 'aprendendo angular',
-    autoria: 'Dev',
-    modelo: '',
+  pensamento: Quote = {
+    conteudo: '',
+    autoria: '',
+    modelo: 'modelo1',
   };
 
-  constructor() {}
+  constructor(private service: QuoteService, private router: Router) {}
 
   ngOnInit(): void {}
 
   salvar() {
-    alert('salvar');
+    this.service.criar(this.pensamento).subscribe(() => {
+      this.router.navigate(['/listQuote']);
+    });
   }
 
   cancelar() {
-    alert('cancelar');
+    return this.router.navigate(['/listQuote']);
   }
 }

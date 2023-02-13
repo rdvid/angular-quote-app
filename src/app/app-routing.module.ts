@@ -1,3 +1,5 @@
+import { EditQuoteComponent } from './components/quotes/edit-quote/edit-quote.component';
+import { DeleteQuoteComponent } from './components/quotes/delete-quote/delete-quote.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ListQuotesComponent } from './components/quotes/list-quotes/list-quotes.component';
@@ -15,6 +17,14 @@ const routes: Routes = [
   {
     path: 'listQuote',
     component: ListQuotesComponent,
+  },
+  {
+    path: 'quote/deleteQuote/:id',
+    component: DeleteQuoteComponent,
+  },
+  {
+    path: 'quote/editQuote/:id',
+    component: EditQuoteComponent,
   },
 ];
 
